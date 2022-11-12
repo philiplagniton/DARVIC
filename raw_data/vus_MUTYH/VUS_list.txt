@@ -220,7 +220,6 @@ Gly234Asp
 Gly247Asp
 Gly261Ser
 Gly283Val
-Ile220Val
 Ile223Val
 Leu208Phe
 Leu209Pro
