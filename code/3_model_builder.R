@@ -3,7 +3,6 @@
 ################################################################################
 
 #Directories
-xgboost_output_dir = paste(rootdir, "xgboost_final_cleanup", sep = "/")
 xgboost_output_dir
 
 #############################################################
