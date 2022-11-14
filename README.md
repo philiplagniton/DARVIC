@@ -4,9 +4,9 @@ DARVIC is a structural based variant impact predictor which uses the Ramachandra
 
 By: Philip Naderev Panuringan Lagniton, Benjamin Tam, San Ming Wang
 
-##Requirements
+## Requirements
 
 The code requires R version 4.2.1 or above. The libraries needed are already listed in the codes.
 
-##Structure of the repository
-###Main
+## Structure of the repository
+### Main
