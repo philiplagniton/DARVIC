@@ -46,7 +46,7 @@ library(doParallel)
 #############################
 
 #Change the root directory and create the file paths below as folders and put the data from the repository 
-rootdir = "C:/Users/Philip Lagniton/OneDrive - University of Macau/Projects/A019-MUTYH/A019_MUTYH_Project_Code/Ramachandran"
+rootdir = "Insert your root directory here and make the subsequent folder as shown by the path below"
 setwd(rootdir)
 getwd()
 list.files()
