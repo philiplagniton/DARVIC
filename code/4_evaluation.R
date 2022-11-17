@@ -64,17 +64,19 @@ prediction_testing_set_df = cbind((testing_set %>% dplyr::select(class, key)),
                       model_predictions_table) %>%
  mutate(classification = case_when(prediction_value >= alphavalue ~ "Deleterious",
                        prediction_value < alphavalue  ~ "Tolerated")) %>%
-  arrange(desc(prediction_value))
+  arrange(desc(prediction_value)) %>% 
+ mutate(original_classification = case_when(class == "pathogenic" ~ "Deleterious",
+                       class == "benign"  ~ "Tolerated")) %>%
+  arrange(desc(prediction_value))  
 prediction_testing_set_df = prediction_testing_set_df %>%
   arrange(class)
 
 model_performance = confusionMatrix(data = as.factor(
   prediction_testing_set_df$classification),
-  reference = as.factor(prediction_testing_set_df$class),
+  reference = as.factor(prediction_testing_set_df$original_classification),
   positive = "Deleterious", mode = "everything")
 model_performance # This would tell you the performance metrics of the model given the dataset
 
-prediction_testing_set_df
 
 
 #Importance matrix
